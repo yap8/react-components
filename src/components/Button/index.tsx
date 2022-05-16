@@ -4,6 +4,7 @@ interface ButtonProps {
   className?: string;
   size?: 'small' | 'medium' | 'large';
   variant?: 'outlined' | 'contained';
+  color?: 'primary' | 'secondary';
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   children: React.ReactNode;
 }
@@ -22,10 +23,10 @@ const Button: React.FC<ButtonProps> = ({
         variant === 'outlined'
           ? 'border hover:bg-slate-50'
           : variant === 'contained'
-          ? 'border hover:bg-slate-50'
-          : 'hover:bg-slate-50',
+          ? 'border border-blue-400 bg-blue-400 text-white hover:bg-blue-500 hover:border-blue-500'
+          : 'border border-transparent hover:bg-slate-50',
         size === 'large'
-          ? 'text-3xl px-5 py-2'
+          ? 'text-2xl px-6 py-2'
           : size === 'small'
           ? 'text-base px-4 py-2'
           : 'text-xl px-4 py-2',
