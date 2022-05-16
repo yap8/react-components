@@ -1,4 +1,5 @@
 import Button from './components/Button';
+import Card from './components/Card';
 import Container from './components/Container';
 import Title from './components/Title';
 
@@ -12,7 +13,7 @@ const App = () => {
         <section className="text-center">
           <Title className="mb-6">Buttons</Title>
           <div className="flex items-center justify-center">
-            <section className="mr-8 border shadow p-4">
+            <Card className="mr-8">
               <Title className="mb-6" variant="h4">
                 Variants
               </Title>
@@ -37,8 +38,8 @@ const App = () => {
                   Contained
                 </Button>
               </div>
-            </section>
-            <section className="mr-8 border shadow p-4">
+            </Card>
+            <Card>
               <Title className="mb-6" variant="h4">
                 Sizes
               </Title>
@@ -66,7 +67,7 @@ const App = () => {
                   Large
                 </Button>
               </div>
-            </section>
+            </Card>
           </div>
         </section>
       </Container>
