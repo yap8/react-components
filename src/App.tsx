@@ -1,16 +1,27 @@
+import { useState } from 'react';
+
 import Button from './components/Button';
 import Card from './components/Card';
 import Container from './components/Container';
+import Modal from './components/Modal';
 import Title from './components/Title';
 
 const App = () => {
+  const [open, setOpen] = useState(true);
+
   return (
     <section>
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <Title className="mb-4">Modal</Title>
+        <Button variant="contained" onClick={() => setOpen(false)}>
+          Close
+        </Button>
+      </Modal>
       <Container className="min-h-screen flex flex-col items-center justify-center">
         <Title className="mb-6" variant="h1">
           Components
         </Title>
-        <section className="text-center">
+        <section className="text-center mb-6">
           <Title className="mb-6">Buttons</Title>
           <div className="flex items-center justify-center">
             <Card className="mr-8">
@@ -69,6 +80,12 @@ const App = () => {
               </div>
             </Card>
           </div>
+        </section>
+        <section>
+          <Title className="mb-6">Modal</Title>
+          <Button variant="contained" onClick={() => setOpen(true)}>
+            Open modal
+          </Button>
         </section>
       </Container>
     </section>

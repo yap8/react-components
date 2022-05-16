@@ -3,6 +3,7 @@ import { twMerge } from 'tailwind-merge';
 interface CardProps {
   className?: string;
   tag?: 'div' | 'li' | 'section';
+  onClick?: React.MouseEventHandler;
   children: React.ReactNode;
 }
 
