@@ -1,14 +1,15 @@
 import Button from './components/Button';
+import Title from './components/Title';
 
 const App = () => {
   return (
     <div>
       <section className="container">
-        <h1>Components</h1>
+        <Title variant="h1">Components</Title>
       </section>
       <section className="container">
-        <h2>Buttons</h2>
-        <h3>Variants</h3>
+        <Title>Buttons</Title>
+        <Title variant="h3">Variants</Title>
         <div>
           <Button className="mr-4" onClick={() => alert('Regular button')}>
             Regular
@@ -24,7 +25,7 @@ const App = () => {
             Contained
           </Button>
         </div>
-        <h3>Sizes</h3>
+        <Title variant="h3">Sizes</Title>
         <div className="flex items-center">
           <Button
             className="mr-4"
